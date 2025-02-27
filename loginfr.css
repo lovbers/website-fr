@@ -1,0 +1,24 @@
+.input-box input::placeholder {
+}
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.wrapper .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin : -15px 0 15px;
+}
+.remeber-forget label input {
+    margin-right: none;
+}
+.remember-forget a {
+    text-decoration : none;
+}
+.remember-forget a:hover {
+    text-decoration: underline;
+}

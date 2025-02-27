@@ -1,0 +1,277 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav Bar Styling */
+nav {
+    background: linear-gradient(135deg, #ff66b2, #ff80cc, #ff5fa2); /* Gradient background */
+    padding: 15px 40px; /* Adjust padding for a more rounded look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 50px; /* Rounded corners to make navbar look more round */
+    font-family: 'Comic Sans MS', sans-serif; /* Fun font for anime site feel */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo and Title Container */
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
+.topnav {
+    overflow: hidden;
+    position: absolute;
+    top:10px;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+    background-color: #191b1e;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    /* background-color: #04AA6D; */
+    color: white;
+  }
+.anime-image {
+    height: 40px; /* Reduced logo size */
+    margin-right: 10px;
+    border-radius: 5px; /* Optional: Add rounded corners to logo */
+}
+
+.anime-title {
+    font-size: 18px; /* Smaller title font size */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize title for better readability */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adjust the gap between links */
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size for the links */
+    padding: 8px 12px;
+    border-radius: 25px; /* Rounded corners for a button-like appearance */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.nav-links a i {
+    margin-right: 5px; /* Adjust space between icon and text */
+}
+
+/* Hover Effect for Navigation Links */
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Add background on hover */
+    color: #ff66b2; /* Change text color on hover */
+}
+
+
+video {
+    width: 99vw;
+    height: 45vh;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    margin-top: 80px;
+    transform: scale(1.2) translateY(10%);
+}
+
+/* Gallery Section */
+.gallery-container {
+    width: 100%;
+    height: calc(100vh - 150px); /* Adjust height to fill the screen */
+    padding: 50px 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px; /* Prevent gallery from overlapping navbar */
+}
+
+.gallery-frame {
+    display: flex;
+    gap: 15px;
+    width: calc(60vh * 3 + 2 * 15px); /* Adjusted width for 3 items */
+    transition: transform 0.5s ease;
+    align-items: center;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    width: 90vh; /* Adjusted size of images */
+    height: 55vh;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease; /* Smooth movement on hover */
+}
+
+/* Hover Effect for Gallery Item */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth movement and filter effects */
+}
+
+/* Hover Effect for Image */
+.gallery-item:hover img {
+    transform: scale(1.05) translate(5px, -5px); /* Slight zoom and movement effect */
+    filter: brightness(1.2); /* Optional: Increase brightness on hover */
+}
+
+/* Left and Right Slide Buttons */
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .gallery-container {
+        height: auto;
+        margin-top: 120px; /* Adjust top margin for mobile */
+    }
+    .gallery-frame {
+        width: 100%;
+    }
+    .gallery-item {
+        width: 80vw;
+        height: 60vh;
+    }
+    .left-btn,
+    .right-btn {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+}
+
+
+#p{
+    position: relative;
+    z-index: 9;
+    top:150px;
+    text-align: center;  /* Center the text inside the <p> */
+    font-family: 'Poppins', sans-serif;  /* Example of a pretty font */
+    font-size: 1.5em;  /* Adjust the font size */
+    color: #333;  /* A nice text color */
+    letter-spacing: 1px;  /* Slightly increased spacing for a clean look */
+    line-height: 1.5;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for all effects */
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow behind the text for more depth */
+}
+.left-btn,
+.right-btn {
+    position: absolute;
+    top: 120%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 2em;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.left-btn:hover,
+.right-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-btn {
+    left: 20px;
+}
+
+.right-btn {
+    right: 20px;
+}
+
+footer {
+    background-color: #ff66b2; /* Same color as the navbar for consistency */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+    margin-top: 40px; /* Space between the content and the footer */
+    border-top: 3px solid #ff66b2; /* Border matching the content section */
+    border-radius: 10px 10px 0 0; /* Rounded top corners for a smooth finish */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for the paragraph */
+    font-size: 1em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Added padding for button-like appearance */
+    border-radius: 20px; /* Rounded corners for the footer links */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #ff66b2; /* Light pink hover effect */
+    color: #191b1e; /* Darker color for text when hovered */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0; /* Less padding on smaller screens */
+    }
+
+    footer p {
+        font-size: 0.9em; /* Slightly smaller text for mobile */
+    }
+}

@@ -1,0 +1,106 @@
+/* Importing other CSS files */
+@import url('./login.css');
+@import url('./loginfr.css');
+@import url('./loginfrfr.css');
+
+/* Centering the anime image and adjusting size */
+.anime-image {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image behaves like a block element */
+    margin: 0 auto; /* This centers the image horizontally */
+}
+
+/* Hide navigation on smaller screens */
+@media (max-width: 1024px) {
+    #Navigation {
+        display: none;
+    }
+}
+
+/* Reset all elements' margin and padding, and set box-sizing */
+* { 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Make sure the body covers the full height and sets the background */
+body {
+  
+    background-size: cover; /* Cover the entire viewport with the image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Ensure body height is 100% of the viewport */
+    margin: 0;
+    display: flex; /* Use flex to center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Wrapper (form container) styling */
+.wrapper {
+    width: 420px; /* Set the width of the form */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the form */
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(35px); /* Add blur effect to the background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow for the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+}
+
+/* Form header styling */
+#loginForm h1 {
+    text-align: center;
+    color: black; /* Adjust color if needed */
+}
+
+/* Input box styling */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px; /* Adjust for icon if needed */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Centering and styling the submit button */
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff80cc; /* Pink color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #ff66b2, #ff80cc, #ff5fa2); /* Gradient background */
+
+}
+
+
+/* Register link at the bottom */
+.register-link {
+    margin-top: 10px;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10p
+}

@@ -1,0 +1,405 @@
+/* General reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #ed4d8a;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #ff66b2; /* Same color as the navbar for consistency */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+    margin-top: 40px; /* Space between the content and the footer */
+    border-top: 3px solid #ff66b2; /* Border matching the content section */
+    border-radius: 10px 10px 0 0; /* Rounded top corners for a smooth finish */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for the paragraph */
+    font-size: 1em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Added padding for button-like appearance */
+    border-radius: 20px; /* Rounded corners for the footer links */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #ff66b2; /* Light pink hover effect */
+    color: #191b1e; /* Darker color for text when hovered */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0; /* Less padding on smaller screens */
+    }
+
+    footer p {
+        font-size: 0.9em; /* Slightly smaller text for mobile */
+    }
+}
+
+.terms-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    border: 2px solid #e492cc; /* Adds a solid border with tomato color */
+    padding: 10px; /* Adds space between the text and the border */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    background-color: #fff; /* Optional: background color inside the border */
+}
+
+/* Terms and Services Content */
+.terms-wrapper {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.terms-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.terms-content h2 {
+    font-size: 26px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.terms-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.terms-content a {
+    color: #191b1e;
+    text-decoration: none;
+}
+
+.terms-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .terms-wrapper {
+        padding: 20px;
+    }
+
+    .terms-content h1 {
+        font-size: 28px;
+    }
+
+    .terms-content h2 {
+        font-size: 22px;
+    }
+
+    .terms-content p {
+        font-size: 16px;
+    }
+}
+
+
+/* Nav Bar Styling */
+nav {
+    background: linear-gradient(135deg, #ff66b2, #ff80cc, #ff5fa2); /* Gradient background */
+    padding: 15px 40px; /* Adjust padding for a more rounded look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 50px; /* Rounded corners to make navbar look more round */
+    font-family: 'Comic Sans MS', sans-serif; /* Fun font for anime site feel */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo and Title Container */
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.anime-image {
+    height: 40px; /* Reduced logo size */
+    margin-right: 10px;
+    border-radius: 5px; /* Optional: Add rounded corners to logo */
+}
+
+.anime-title {
+    font-size: 18px; /* Smaller title font size */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize title for better readability */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+/* Nav Bar Styling */
+nav {
+    background: linear-gradient(135deg, #ff66b2, #ff80cc, #ff5fa2); /* Gradient background */
+    padding: 15px 40px; /* Adjust padding for a more rounded look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 50px; /* Rounded corners to make navbar look more round */
+    font-family: 'Comic Sans MS', sans-serif; /* Fun font for anime site feel */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo and Title Container */
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
+.topnav {
+    overflow: hidden;
+    position: absolute;
+    top:10px;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+    background-color: #191b1e;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    /* background-color: #04AA6D; */
+    color: white;
+  }
+.anime-image {
+    height: 40px; /* Reduced logo size */
+    margin-right: 10px;
+    border-radius: 5px; /* Optional: Add rounded corners to logo */
+}
+
+@media (max-width : 1024px) {
+#Navigation {
+    display: none;
+}
+}
+
+.anime-title {
+    font-size: 18px; /* Smaller title font size */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize title for better readability */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adjust the gap between links */
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size for the links */
+    padding: 8px 12px;
+    border-radius: 25px; /* Rounded corners for a button-like appearance */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.nav-links a i {
+    margin-right: 5px; /* Adjust space between icon and text */
+}
+
+/* Hover Effect for Navigation Links */
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Add background on hover */
+    color: #ff66b2; /* Change text color on hover */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adjust the gap between links */
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size for the links */
+    padding: 8px 12px;
+    border-radius: 25px; /* Rounded corners for a button-like appearance */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.nav-links a i {
+    margin-right: 5px; /* Adjust space between icon and text */
+}
+
+/* Hover Effect for Navigation Links */
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Add background on hover */
+    color: #ff66b2; /* Change text color on hover */
+}
+
+
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgb(252, 252, 252); /* Soft, warm background color */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navigation Bar */
+.normal-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e492cc; /* Soft pink background */
+    padding: 20px;
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Logo and Title Container */
+.normal-nav .logo-title-container {
+    display: flex;
+    align-items: center; /* Aligns logo and title */
+}
+
+.normal-nav .anime-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px; /* Space between logo and title */
+}
+
+.normal-nav .anime-title {
+    font-size: 1.8em; /* Title font size */
+    font-weight: bold;
+    color: #ffffff; /* Title color */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adjust the gap between links */
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size for the links */
+    padding: 8px 12px;
+    border-radius: 25px; /* Rounded corners for a button-like appearance */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.nav-links a i {
+    margin-right: 5px; /* Adjust space between icon and text */
+}
+
+/* Hover Effect for Navigation Links */
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Add background on hover */
+    color: #ff66b2; /* Change text color on hover */
+}
+ .topnav #myLinks {
+    display: none;
+    background-color: #191b1e;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    /* background-color: #04AA6D; */
+    color: white;
+  }
