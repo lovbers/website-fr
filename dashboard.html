@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>anime.cloud-user profile
+    </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime cloud - User Dashboard</title>
+    <link rel="icon" href="./assets/images/anime.webp" type="image/x-icon"> 
+    <link rel="stylesheet" href="./assets/styles/stylelogin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <button onclick="logout()">Logout</button>
+        <button onclick="goToFrontPage()">Go to Front Page</button> <!-- New button -->
+       
+    </div>
+    <div class="profile-container">
+        <img src="./assets/images/WhatsApp Image 2025-01-29 at 12.46.38.jpeg" alt="Profile Picture" class="profile-picture">
+        <div class="username">bitter old man</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let username = localStorage.getItem('username');
+            if (!username) {
+                window.location.href = "index.html"; // Redirect if not logged in
+            }
+            document.getElementById('user-name').textContent = username;
+        });
+
+        function logout() {
+            localStorage.removeItem('username');
+            window.location.href = "index.html"; // Redirect to login page
+        }
+
+        // New function to go to the front page
+        function goToFrontPage() {
+            window.location.href = "frontpage.html"; // Redirect to the front page
+        }
+    </script>
+    
+</body>
+</html>
