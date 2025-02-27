@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>anime.cloud-login</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime cloud - login</title>
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="icon" href="./assets/images/anime.webp" type="image/x-icon"> 
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <img src="./assets/images/anime.webp" alt="Anime Logo" class="anime-image">
+
+            <div class="input-box">
+                <input type="text" placeholder="username" id="username" name="username" required />
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="password" id="password" name="password" required />
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <button type="submit" class="button">login</button>
+
+            <div class="register-link">
+                <p>don't have an account? <a href="/register.html">register</a></p>
+            </div>
+            <p id="error-message" class="error"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let errorMessage = document.getElementById('error-message');
+
+            let validUsername = "shayisabitteroldman";
+            let validPassword = "zenaisawesome123";
+
+            // Check if username is empty or contains only spaces
+            if (username.trim() === "") {
+                errorMessage.textContent = "Username cannot be blank.";
+                return; // Stop further execution
+            }
+
+            // Check if the username length is shorter than 50 characters
+            if (username.length > 50) {
+                errorMessage.textContent = "Username must be shorter than 50 characters.";
+                return; // Stop further execution
+            }
+
+            // Validate username and password
+            if (username === validUsername && password === validPassword) {
+                localStorage.setItem('username', username);
+                window.location.href = "dashboard.html";
+            } else {
+                errorMessage.textContent = "Invalid username or password.";
+            }
+        });
+    </script>
+</body>
+
+</html>
