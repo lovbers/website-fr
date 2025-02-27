@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>anime.cloud-register
+    </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime cloud - register</title>
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="icon" href="./assets/images/anime.webp" type="image/x-icon"> 
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="registerForm">
+            <h1>Register</h1>
+            <img src="./assets/images/anime.webp" alt="Anime Logo" class="anime-image">
+
+            <div class="input-box">
+                <input type="text" placeholder="username" id="username" name="username" required />
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            
+            <div class="input-box">
+                <input type="email" placeholder="email" id="email-input" name="Email" required />
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="password" id="password" name="password" required />
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="confirm password" id="confirmPassword" name="confirmPassword" required />
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="remember-forget">
+                <label> <input type="checkbox" /> remember me </label>
+                <a href="#">forgot password?</a>
+            </div>
+
+            <button type="submit" class="button">Register</button>
+
+            <div class="register-link">
+                <p>Already have an account? <a href="./index.html">Login</a></p>
+            </div>
+            <p id="error-message" class="error"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirmPassword').value;
+            let errorMessage = document.getElementById('error-message');
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                return;
+            }
+
+            // Save user credentials (normally you'd want to store this securely)
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            window.location.href = "index.html"; // Redirect to the front page
+        
+        
+        });
+    </script>
+</body>
+
+</html>
