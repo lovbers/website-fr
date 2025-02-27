@@ -1,0 +1,135 @@
+/* إعدادات عامة لسطح المكتب */
+@media (min-width: 1024px) {
+    /* تنسيق الجسم: */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    @media (max-width: 768px) {
+        /* تنسيقات للهواتف والأجهزة اللوحية */
+        .nav-links {
+            flex-direction: column;
+        }
+        .content {
+            padding: 20px;
+        }
+    }
+    @media (max-width: 768px) {
+        .content h1 {
+            font-size: 2em; /* تقليل حجم العنوان */
+        }
+        .nav-links a {
+            font-size: 0.9em; /* تقليل حجم روابط التنقل */
+        }
+    }
+    @media (max-width: 768px) {
+        .anime-title {
+            display: none; /* إخفاء العنوان */
+        }
+    }
+    @media (max-width: 768px) {
+        .video-gallery {
+            grid-template-columns: 1fr; /* عرض عنصر واحد في كل صف */
+        }
+    }
+
+    /* إعدادات صفحة الرأس (Header) */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+    }
+
+    .logo-title-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .anime-title {
+        font-size: 1.8em;
+        color: white;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    /* إعدادات قائمة التنقل (Navigation) */
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* إعدادات المحتوى الرئيسي (Main Content) */
+    .content {
+        padding: 40px;
+        margin-top: 100px; /* مساحة لتجنب تغطية شريط التنقل */
+        background-color: #fff;
+        color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h1 {
+        font-size: 2.8em;
+        color: #2f2f2f;
+    }
+
+    /* إعدادات الفيديو (Video Gallery) */
+    .video-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .video-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .video-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        background-color: #ff66b2;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1em;
+        margin-top: 40px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    footer a:hover {
+        background-color: #ff66b2;
+        color: #191b1e;
+    }
+}
